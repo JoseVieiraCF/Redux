@@ -1,9 +1,9 @@
 import React from 'react';
 import Card from '../Card/Card';
+import { connect } from 'react-redux';
 
-export default function Sum(props){
-    const max = props.max;
-    const min = props.min;
+function Sum(props){
+    const { min, max } = props;
     return(
         <Card title="Soma dos Números" Green>
             <div className="Sum">
@@ -16,3 +16,12 @@ export default function Sum(props){
         </Card>
     );
 }
+
+function mapStateToProps(state){
+    return {
+        min: state.numbers.min,
+        max: state.numbers.max
+    }
+}
+
+export default connect(mapStateToProps)(Sum);
