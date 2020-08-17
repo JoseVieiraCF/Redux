@@ -1,7 +1,8 @@
 import React from 'react';
 import Card from '../Card/Card';
+import { connect } from 'react-redux'; 
 
-export default function Sort(props){
+function Sort(props){
     const { max, min} = props;
     const random = parseInt(Math.random() * (max-min)) + min;
     return(
@@ -15,4 +16,14 @@ export default function Sort(props){
             
         </Card>
     );
+
 }
+
+function mapStateToProps(state){
+    return {
+        min: state.numbers.min,
+        max: state.numbers.max
+    }
+}
+
+export default connect(mapStateToProps)(Sort);

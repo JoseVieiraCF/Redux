@@ -5,7 +5,7 @@ const reducers = combineReducers({
         //console.log(state, ' ', action)
         return {
             min: 7,
-            max: 7
+            max: 20
         }
     },
     names: function (state, action){

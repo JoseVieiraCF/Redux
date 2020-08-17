@@ -20,9 +20,9 @@ function App() {
         <Interval min={min} max={max} onMaxChanged={setMax} onMinChanged={setMin}/>
       </div>
       <div className="linha">
-        <Average min={min} max={max}/>
-        <Sum min={min} max={max} />
-        <Sort min={min} max={max} />
+        <Average/>
+        <Sum/>
+        <Sort/>
       </div>
       
     </div>
