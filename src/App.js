@@ -8,8 +8,8 @@ import Interval from './components/Interval/Interval';
 
 function App() {
 
-  const [min, setMin] = useState(10);
-  const [max, setMax] = useState(2);
+  const [min, setMin] = useState(0);
+  const [max, setMax] = useState(0);
 
 
   return (
@@ -17,12 +17,12 @@ function App() {
       <h1>React Redux</h1>
 
       <div className="linha">
-        <Interval />
+        <Interval min={min} max={max} onMaxChanged={setMax} onMinChanged={setMin}/>
       </div>
       <div className="linha">
         <Average min={min} max={max}/>
         <Sum min={min} max={max} />
-        <Sort min={min} max={max}/ >
+        <Sort min={min} max={max} />
       </div>
       
     </div>
