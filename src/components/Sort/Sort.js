@@ -6,7 +6,7 @@ export default function Sort(props){
         <Card title="Sorteio dos Números" Blue>
             <div className="Sort">
                 <span>
-                    <span>Resultado:</span>
+                    <span>Resultado: </span>
                     <span>0</span>
                 </span>
             </div>
